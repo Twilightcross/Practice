@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Practice3
+{
+	public static void main(String [] args){
+		
+		Scanner sc=new Scanner(System.in);
+		int p1,p2,p3;
+		
+		boolean result;
+		double avg;
+
+		System.out.println("출결 : ");
+		p1=sc.nextInt();
+		System.out.println("it : ");
+		p2=sc.nextInt();
+		System.out.println("일본어 : " );
+		p3=sc.nextInt();
+
+		avg=(p1*40)+(p2*30)+(p3*30);
+		result=avg>=70;
+
+		System.out.println("you are not alone "+result+"");
+	}
+}
+/* sc마스터에서 출결은 40%, IT점수 30% 일본어점수 30%이다
+출결점수 100, it점수 50, 일본어점수 50
+총점 70, 수료여부 true
+총점 70점 이상은 수료가 가능하다 */
