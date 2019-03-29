@@ -1,0 +1,40 @@
+//숫자 2개를 입력하고 추가 입력 메뉴는 덧셈 뺄셈 곱셈 나눗셈, 이것을 Switch로 
+
+import java.util.Scanner;
+
+class Yami
+{
+	public static void main(String [] args){
+		int one,two,three;
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("첫 번째 숫자 입력 :");
+		one=sc.nextInt();
+	
+		System.out.println("두 번째 숫자 입력 :");
+		two=sc.nextInt();
+
+		System.out.println("고르시오");
+		System.out.println("1번 곱셈");
+		System.out.println("2번 나눗셈");
+		System.out.println("3번 덧셈");
+		System.out.println("4번 뺄셈");
+		three=sc.nextInt();
+		
+		switch(three){
+			case 1: 
+				System.out.print("곱셈결과 "+one*two+"");
+			break;
+			case 2: 
+				System.out.print("나눗셈결과"+one/two+"나머지 "+one%two+"");
+			break;
+			case 3:
+				System.out.print("덧셈결과"+one+two+"");
+			break;
+			case 4: 
+				System.out.print(one-two);
+			default :
+				System.out.print("메뉴가 잘못 선택되었습니다.");
+		}
+	}
+}
