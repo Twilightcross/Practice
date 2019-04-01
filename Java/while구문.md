@@ -35,7 +35,7 @@ class While
 > 무한반복의 좋은 예
 
 
-import java.util.Scanner;
+<pre>import java.util.Scanner;
 
 class While
 {
@@ -49,9 +49,9 @@ class While
       int choice=sc.nextInt();
       if(choic==4);
     
-    ###flag=false; or break;
+    flag=false; or break;
     
     }
   }
-} 
+} </pre>
   
