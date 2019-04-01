@@ -27,9 +27,31 @@ class While
   { 
     int a=0;
     
-    while(true){
+    while(true){  //트루인경우
     System.out.println(a++);
     }
   }
 } 
 > 무한반복의 좋은 예
+
+
+import java.util.Scanner;
+
+class While
+{
+  public static void main(String [] args)
+  { 
+    boolean flag= true >> flag라는 boolean의 이름은 맘대로 정하는 것이 가능, 
+    Scanner sc= new Scanner(System.in);
+    
+    While(flag){
+      System.out.println("메뉴입력 :");
+      int choice=sc.nextInt();
+      if(choic==4);
+    
+    ###flag=false; or break;
+    
+    }
+  }
+} 
+  
