@@ -19,7 +19,7 @@ while의 조건식은 참 혹의 거짓의 값을 가지며
  (숫자 +1씩 무한히 반복한다던지..)
  -------------------------------
 
-import java.util.Scanner;
+<pre>import java.util.Scanner;
 
 class While
 {
@@ -31,7 +31,7 @@ class While
     System.out.println(a++);
     }
   }
-} 
+} </pre>
 > 무한반복의 좋은 예
 
 
