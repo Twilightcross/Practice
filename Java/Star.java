@@ -61,7 +61,27 @@ for (int a=0; a<4 ;a++ )
 			System.out.println("");
 		}
 	}
-} //피라미드 모양 별 찍기 // 아직 이해 어려움 
+} //정삼각 모양 별 찍기 // 아직 이해 어려움 
 
+for (int i=0; i<5 ; i++ )
+	 {
+		 int x=4;
+		 for (int j=0; j<x-i ; j++ ) //별 앞에 공백을 찍는 for문
+		 {
+			 System.out.print(" ");
+		 }
+		 for (int k=0;k<=i ; k++ ) // 별을 찍는 for 문
+		 {
+			 if (k==0) // *별을 홀수개 찍게 하기 위해 하나와
+			 {
+				 System.out.print("*");
+			 }else //두개를 나눠서 찍는다.
+			 {System.out.print("**"); 
+		 }
+		 }
+		 System.out.println("");
+	 }
+	}
+} //정삼각 별 찍기 2
 
 
