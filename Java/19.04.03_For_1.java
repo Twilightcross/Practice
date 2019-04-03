@@ -129,7 +129,7 @@ class Dodram
 
 		int gram;
 		String meat;
-		double price;
+		double price,result;
 		boolean flag=true;
 
         //닭고기 100g 300원, 돼지고기 100g 500원 소고기 100g 700원
@@ -142,12 +142,11 @@ class Dodram
 			System.out.println("고기 무게를 입력하시오.(kg) ");
 			gram=sc.nextInt();
 			System.out.println("더 입력하시겠습니까? (Y/N) ");
-		    meat=sc.next();
+		        meat=sc.next();
 
 			switch (meat){
 				case "닭고기": 
 				price=(gram*3000);
-
 				break;
 				case "돼지고기":
 				price=(gram*5000);
@@ -159,14 +158,15 @@ class Dodram
 			    System.out.println("제대로 된 고기명을 입력하세요");
 				break;
 				case n :
-				price=
-				System.out.println(" 총 가격 :"++"입니다.");
+				result+=price;
+				System.out.println(" 총 가격 :"+result+"입니다.");
 				flag=false
 				break;
+				case y :
+					
 				
 			}
 	    }
-		System.out.printf(
 	}
 } // 수정중 
 	
