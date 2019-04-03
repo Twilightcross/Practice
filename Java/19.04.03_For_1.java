@@ -55,7 +55,8 @@ public static void main(String [] args){
 			                     // total=i라고 정의 할 수 없다. 입력값이 들어가야하니 
 								 // total+=을 사용해 입력값의 합을 구한다.
 		}
-		 System.out.printf("평균값 : %.2f\n",(total/(double)subject)); //
+		 System.out.printf("평균값 : %.2f\n",(total/(double)subject)); 
+	         // %.2f는 소수점 둘째자리까지 출력이다.f는 플루%n이라는 문이 쓰였다. 둘 다 newline을 만드는 것은 
 
 	}
 }
