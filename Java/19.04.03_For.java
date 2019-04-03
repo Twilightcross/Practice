@@ -60,3 +60,22 @@ class Practice3
 		 }
 	 }
 }
+
+4)
+	 public static void main(String [] args){
+
+		 int num;
+		 Scanner sc = new Scanner(System.in);
+
+		 System.out.println("정수 입력 :");
+		 num=sc.nextInt();
+
+		 for (int a=1;a<=num ;a++)
+		 {
+			if (a%2==0) //지정 된 숫자 내에서 짝수(2로 나누어 떨어지는) 수를 나열		
+			{
+				System.out.println(a);
+			}
+		 }
+	 }
+}
