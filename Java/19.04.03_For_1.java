@@ -61,3 +61,61 @@ public static void main(String [] args){
 	}
 }
 
+
+import java.util.Scanner;
+
+class Practice3
+{
+	public static void main(String [] args){
+
+		Scanner sc= new Scanner(System.in);
+		String fish,result; //result 값을 입력하면 구지 System.out.println()을 사용할 필요가없다.if값에 입력하면된다.
+		int weight,height;
+
+		System.out.println("물고기 이름을 입력하세요");
+		fish=sc.next();
+		System.out.println("길이를 입력하세요");
+		height=sc.nextInt();
+		System.out.println("무게를 입력하세요");
+		weight=sc.nextInt();
+
+		switch (fish)
+		{
+		case "배스":
+			System.out.println("가지고갈 수 있습니다.");
+		break;
+
+		case "가물치": 
+			if (weight<=200)
+			{
+			System.out.println("가지고 갈 수 없습니다");
+			}else{
+			System.out.println("가지고 갈 수 있습니다");
+			}
+			break;
+		case "잉어":
+			if (weight<=150||height<=10) //~이거나 일 때는 ||를 사용한다.
+			{
+			System.out.println("가지고 갈 수 없습니다.");
+			}else{
+			System.out.println("가지고 갈 수 있습니다.");
+			}
+			break;
+		case "쏘가리":
+			{
+			System.out.println("가지고 갈 수 없습니다");
+			break;
+			}
+		case "꺽치" : 
+			if (height>=10)
+			{
+			System.out.println("가지고 갈 수 없습니다.");
+		    break;
+			}
+	    default : 
+			System.out.println("가지고 갈 수 있습니다.");
+		}
+	}
+}
+
+
