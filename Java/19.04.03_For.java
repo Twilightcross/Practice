@@ -79,3 +79,24 @@ class Practice3
 		 }
 	 }
 }
+
+5) //지정된 연도를 입력받아, 1년부터 당해년도까지의 모든 돼지해를 출력하시오 
+ public static void main(String [] args){
+
+		 int year;
+		 Scanner sc = new Scanner(System.in);
+
+		 System.out.println("년도 입력 :");
+		 year=sc.nextInt();
+
+		 for (int a=1;a<=year ;a++)
+		 {
+			if (a%12==3) //지정 된 숫자 내에서 짝수(2로 나누어 떨어지는) 수를 나열
+				     //사실 말이 돼지해지 실제로는 위의 짝수 구하는 문제와 다르지 않다. 
+				     //문제를 구하는 공식은 같다 문제가 가지고 있는 의미파악이 제일 중요하다.
+			{
+				System.out.println(a);
+			}
+		 }
+	 }
+}
