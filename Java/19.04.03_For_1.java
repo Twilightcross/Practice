@@ -163,6 +163,8 @@ class Dodram
 				flag=false
 				break;
 				case y :
+				return;
+				break;
 					
 				
 			}
