@@ -36,3 +36,27 @@ class Exam
 		}
 	}
 }
+
+public static void main(String [] args){
+
+		int subject,total=0;
+		double avg;
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("몇 과목의 점수를 입력하시겠습니까");
+		subject=sc.nextInt();
+
+		//과목의 입력 숫자만큼 점수를 계속 입력해줘야한다 ( 계속 입력 : 반복, 과목의 입력 숫자  : 회수의 제한 => for 문이라는 것을 알 수 있음)
+
+		for (int i=1 ; i<=subject ; i++)
+		{
+			System.out.printf("%d 점수를 입력하십시오 \n",i); //i 번째 점수를 입력해야한다.
+			total+=sc.nextInt(); // 총점수를 계산해서 평균을 내야하는데 총 과목 수는 i다 
+			                     // total=i라고 정의 할 수 없다. 입력값이 들어가야하니 
+								 // total+=을 사용해 입력값의 합을 구한다.
+		}
+		 System.out.printf("평균값 : %.2f\n",(total/(double)subject)); //
+
+	}
+}
+
