@@ -119,3 +119,58 @@ class Practice3
 }
 
 
+import java.util.Scanner;
+
+class Dodram
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc =new Scanner(System.in);
+
+		int gram;
+		String meat;
+		double price;
+		boolean flag=true;
+
+        //닭고기 100g 300원, 돼지고기 100g 500원 소고기 100g 700원
+		
+
+		while (flag)
+		{
+			System.out.println("고기 종류를 입력하시오. (종류는 닭고기/돼지고기/소고기 ");
+			meat=sc.next();
+			System.out.println("고기 무게를 입력하시오.(kg) ");
+			gram=sc.nextInt();
+			System.out.println("더 입력하시겠습니까? (Y/N) ");
+		    meat=sc.next();
+
+			switch (meat){
+				case "닭고기": 
+				price=(gram*3000);
+
+				break;
+				case "돼지고기":
+				price=(gram*5000);
+				break;
+				case "소고기" : 
+				price=(gram*7000);
+				break;
+				default :
+			    System.out.println("제대로 된 고기명을 입력하세요");
+				break;
+				case n :
+				price=
+				System.out.println(" 총 가격 :"++"입니다.");
+				flag=false
+				break;
+				
+			}
+	    }
+		System.out.printf(
+	}
+} // 수정중 
+	
+	
+	
+
+
