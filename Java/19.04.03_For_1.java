@@ -128,7 +128,7 @@ class Dodram
 		Scanner sc =new Scanner(System.in);
 
 		int gram;
-		String meat;
+		String meat,choice;
 		double price,result;
 		boolean flag=true;
 
@@ -141,18 +141,17 @@ class Dodram
 			meat=sc.next();
 			System.out.println("고기 무게를 입력하시오.(kg) ");
 			gram=sc.nextInt();
-			System.out.println("더 입력하시겠습니까? (Y/N) ");
-		        meat=sc.next();
+			
 
 			switch (meat){
 				case "닭고기": 
-				price=(gram*3000);
+				price+=(gram*3000);
 				break;
 				case "돼지고기":
-				price=(gram*5000);
+				price+=(gram*5000);
 				break;
 				case "소고기" : 
-				price=(gram*7000);
+				price+=(gram*7000);
 				break;
 				default :
 			    System.out.println("제대로 된 고기명을 입력하세요");
@@ -163,12 +162,20 @@ class Dodram
 				flag=false
 				break;
 				case y :
-				return;
 				break;
-					
+			   System.out.println("더 입력하시겠습니까? (Y/N) ");
+		           choice=sc.next();
+			
+			switch(choice){
+				case "n"
+				case "N"
+			        flag =false;
+				break;
 				
 			}
+			System.out.println("총 가격 :%,1d 원n",total)
 	    }
+			
 	}
 } // 수정중 
 	
