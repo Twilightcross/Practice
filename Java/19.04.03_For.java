@@ -100,3 +100,27 @@ class Practice3
 		 }
 	 }
 }
+
+
+public static void main(String [] args){
+
+		for (int i=1; i<5; i++ )
+		{ // i가 1일 때 반복문이 실행된다
+			for (int j=1; j<5-i ;j++ )
+			{ //i가 1일때 j가 작다.참이다. 반복문이 실행된다.
+              //i가 3일때 j가 작다.참이다
+			  //i가 2일때 j가 크다.false다 반복문을 나온다.
+			  //i가 3일때 j가 크다.false다 반복문을 나온다.
+
+				System.out.print(" ");
+			}
+			for (int j=1; j<=2*i-1 ;j++ )
+			{ // i가 1일때 1이다j=1이다 반복문이 실행된다.
+			  // i가 2일때 3이다j<3이다 반복문이 실행된다 
+			  // i가 3일때 5이다j<5이다 반복문이 실행된다.
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+}
+}
