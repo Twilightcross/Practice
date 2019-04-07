@@ -6,14 +6,19 @@ class For
 {
    public static void main(String [] args){
    
-    int num=0; 
-    
-    for( int a=1, a<=10, a++)
-    {
-      num+=a;
-    } 
-    System.out.println(num); //1에서 10까지 정수의 합을 돌렸을 때
-    } 
+   public static void main(String[] args) 
+	{
+		int a;
+		int b;
+
+		for (a=1,b=0; a<=10;a++ )
+		{
+			b+=a;
+			
+			System.out.println(b); //1부터 10까지 정수의 
+		}
+
+	}
 }
  
  2)
