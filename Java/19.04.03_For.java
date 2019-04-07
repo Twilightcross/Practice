@@ -7,17 +7,23 @@ class For
    public static void main(String [] args){
    
    public static void main(String[] args) 
+{
+	int a;
+	int b;
+
+	for (a=1,b=0; a<=10;a++ )
 	{
-		int a;
-		int b;
+		b+=a;
+		System.out.println(b); //1부터 10까지 정수의 합
+		if (a==10)
+			{
+		//10이면 대신 =를 출력하고 덧셈 결과를 출력하는 코드
 
-		for (a=1,b=0; a<=10;a++ )
-		{
-			b+=a;
-			
-			System.out.println(b); //1부터 10까지 정수의 
-		}
-
+				System.out.print("=");
+				System.out.print(b);
+			}
+			else System.out.print("+");
+	}
 	}
 }
  
