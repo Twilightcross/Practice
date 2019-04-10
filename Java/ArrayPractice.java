@@ -1,6 +1,6 @@
 import java.util.Scanner; // 영화관 좌석 입력 예제 
 
-class Test6 
+class Array1
 {
 	public static void main(String[] args) 
 	{
@@ -41,3 +41,22 @@ class Test6
 		System.out.println(); // 후위에서 앞선 for문을 반복 하여 입력된 내용이 "순차적"으로 표시될 수 있게 함
 	}
 }
+
+class Array2
+{
+	public static void main(String[] args) 
+	{
+		int [] array = new int [100];
+
+		for (int i=0;i<100 ;i++ )
+		{
+			array[i]=i+1; //자리세팅
+		}
+
+		for (int i=0;i<array.length;i++ )
+		{
+			System.out.println(array[i]); // 실제 길이만큼 입력 
+		}
+
+		}
+	}
