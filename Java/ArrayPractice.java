@@ -60,3 +60,33 @@ class Array2
 
 		}
 	}
+
+class Neard
+{
+	public static void main(String[] args) 
+	{
+		int [] array = new int [100];
+
+		for (int i=0; i<100; i++)
+		{
+			if (((i+1)%3==0)&&((i+1)%5==0))
+			{
+				array[i]=3535; // system.out.print로 값을 출력하는 것이 아니다. 값을 대입하는 것이다.
+			}else if ((i+1)%3==0)
+			{
+				array[i]=3333;
+			}else if ((i+1)%5==0)
+			{
+				array[i]=5555;
+			}else{
+				array[i]=i+1;
+			}
+		
+		}
+		for (int i=0;i<100 ;i++ )
+		{
+			System.out.println(array[i]); //그리고 마지막에 값을 출력하는 것이다.
+		}
+		System.out.println();
+	}
+}
