@@ -90,3 +90,51 @@ class Neard
 		System.out.println();
 	}
 }
+
+/*좌석번호가 1부터 100번인 콘서트장이 있다, 10개의 좌석이 한행이고, 10개의 열이 있다.
+핸드폰번호와 좌석번호(행과 열)를 입력하여 예약받는 프로그램을 만드시오.
+-전체 좌석 출력시 예약된 자리는 'ㅇ' 로 표시하고, 이미 예약된 자리를 예약하려고 하면, 
+이미 예약한 사람의 휴대폰 번호를 출력하시오. */
+import java.util.Scanner;
+
+class Neard
+{
+	public static void main(String [] args){
+
+		int row, column;
+		String phone;
+        Scanner sc = new Scanner(System.in);
+		String [] seats = new String [100];
+
+		System.out.println("핸드폰번호를 입력하세요 ");
+		phone= sc.next();
+
+		System.out.println("좌석번호 (행)을 입력하세요");
+		row= sc.nextInt();
+		System.out.println("좌석번호 (열)을 입력하세요");
+		column=sc.nextInt();
+
+		if (seats[(row-1)*10+(column-1)]==null)
+		{
+			seats[(row-1)*10+(column-1)]=phone;   
+		}else{
+			System.out.println("예약된 좌석입니다.");
+			System.out.println(seats[(row-1)*10+(column-1)]);
+		}
+
+		for (int i=0;i<100;i++)
+		{
+			if (seats[i]==null)
+			{
+				System.out.print("[    ]");
+			}else{
+				System.out.print("[ o  ]");
+			}
+			if (((i+1)%10)==0)
+			{
+				System.out.println();
+			}
+
+		}
+	}
+}
