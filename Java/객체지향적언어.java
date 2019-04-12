@@ -64,3 +64,17 @@ class DriveService
 		}
 	}
 }
+
+
+
+
+
+// 객체 class 파일 
+
+class Customer
+{
+	String name;
+	String phone;
+	String carnum;
+	String place;
+}
