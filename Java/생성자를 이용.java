@@ -21,6 +21,7 @@ class Market
 			System.out.println("주문을 출력하시겠습니까 = 2");
 			System.out.println("현재까지의 매출을 출력하시겠습니까 = 3");
 			System.out.println("주문을 초기화 합니다 = 4");
+			System.out.println("주문을 삭제 하겠습니까 = 5");
 			choice=sc.nextInt();
 
 			switch (choice)
@@ -64,17 +65,38 @@ class Market
 				counter=0;
 
 				break;
+			case 5 : 
+
+				System.out.println("삭제하려는 주문 번호를 입력");
+				foodno=sc.nextInt();
+
+				for (int i=0;i<counter ;i++ )
+				{
+					if (foodno==dk[i].getFoodno())
+					{
+						for (int j=i;i<counter;i++)/*찾아내려는 곳의 항목부터 시작은 하나 counter까지로 한다면 다음항에서 +1을 하므로 전체 배열보다 하나가 
+						더 늘어날 수 있다. 따라서 -1을 해주어야한다. */
+						{
+							dk[j]=dk[j+1];
+							
+						}
+						//마지막에 하나를 삭제해야하는것이 아니라 전체 배열을 땡기고 하나 줄인것.
+						//counter를 통해
+						counter--;
+					}
+				}
+
 			default : 
 				System.out.println("메뉴를 보고 제대로 입력하세요");
 				
 				break;
+			
 
 
 		     }
 		}
 		}
 }
-
 
 
 class Food
