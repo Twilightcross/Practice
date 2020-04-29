@@ -1,0 +1,45 @@
+convert문
+CONVERT([데이터형식], '[변환하고자 하는 데이터]', [스타일])
+
+문자열 80과 문자열 60을 convert를 이용하여 int형으로 형변환후 + 를 이용하여 더하시오
+select convert(int,'80)+convert(int,'60')as 결과
+
+convert는 3가지 인수를 갖는데 데이터 형식 변환하고자 하는데 이터, 스타일이다
+여기서 스타일은 생략할 수 있는 값이며 생략하지 않고 사용하고자 하는 경우에는
+datetime,float,real,money,samllmoney,xml,binary,varbinary,char,varchar,에서 사용할 수 있다.
+
+over()함수는 order by,group by 서브쿼리를 개선하기 위해 나온 함수라고 할 수 있다.
+
+서브쿼리(sub query)란 select 문 안에 다시 select 문이 기술된 형태의 쿼리이다.
+앞서 쿼리와 slelect문은 같은 의미이다. 서브쿼리(하위 select 문)결가를 메인 쿼리(상위 select)문에서 받아 처리하는 구조이기 
+때문에 중첩된(nested)쿼리라고도 부른다. 서브쿼리의 결과는 메인 쿼리의 조건으로 사용된다. 
+단일 select 문으로 조건식을 만들기에는 조건이 복잡할 때 또는 완전히 다른 테이블에서 데이터에세 값을 조회하여 메인 쿼리의
+조건으로 사용하려 할 때 유용하다.
+이를테면 서브쿼리는 두 번 작성해서 결과를 출력해야하는 selelct 문을 한번만 작성해서 처리할 수 있다.
+
+서브쿼리가 가능한 곳은 selelct from where having order by insert문의 values update문의 set
+서브쿼리가 단일 비교 연산자(=.<,<=,>,>=,<>)와 함께 사용할 경우에는 서브쿼리의 결과 건수가 반드시
+1건이하여야한다. 2건 이상일 경우에는 오류가 발생한다.
+
+like 연산자는 내용중에 해당하는 단어가 있으면 검색이 가능하다.
+
+select * from table_name where title like '블로그%'
+블로그로 시작되는 모든 값을 검색하여 가져온다
+select * from table_name where title like '%블로그'
+블로그로 끝나는 모든 값을 검색하여 가져온다.
+selelct * from table_name where title like '%블로그%'
+블로그가 들어있는 모든값을 검색하여 가져온다
+
+
+_는 한글자만을 의미하며 %는 0글자부터 그 이상을 의미한다.
+case sensitivity는 대소문자를 구별하느냐의 차이를 의미한다.
+기본적으로 case -insensitivity하다. 즉 대소문자를 구분하지 않는다.
+
+case sensivitiy 하려면 즉 대소문자를 구별하여 패텬을 찾기 위해서는 binary가 필요하다.
+-select * from users where arrtirbute like binary '%test%'
+와일드카드를 문자로 사용하기 위해서는 \를 앞에 붙여야한다.
+
+
+ '#'을 사용하게 된다면 오라클에서 변수를 바인드를 하여 ID값이 달라져도 같은 쿼리로 인식하게 됩니다.
+
+반면 $를 사용한다면 num값이 달라질 경우 다른 쿼리로 인식하기 때문에 새로 파싱 등의 작업으로 속도가 저하될 수가 있습니다.
