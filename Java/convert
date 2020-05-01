@@ -75,3 +75,35 @@ totalpage = 총 페이지 수
 startpage = 시작 페이지 수
 endPage = 끝 페이지 수 
 pageScale = 한 페이지에 보여질 페이지 수 
+
+el태그 표현 단순화
+<!-- DB데이터 표현시 -->
+${name}
+<!--객체 값 가져올 때 -->
+${user.name}
+<!--만약 저장된 객체가 List일 경우--> 
+${list["0"]}
+표현도 가능 []안의 값은 키값이나or 프로퍼티 명이나 인덱스이고 왼쪽은 map.beans,array,list 타입이 올 수 있다.
+<!-- c:out object -->
+<!-- :변수의 값을 출력한다. -->
+<c:out value="expression" default="expression" [escapeXml="boolean]"/>
+escapeXml 애트리뷰트는 선택사항이다
+<c:out value="${userId}" default="Q u i c K" />
+ 
+<!-- c:set object -->
+<!-- :변수의 값을 저장한다. -->
+<c:set var="name" [scope="scope"] value="expression"/>
+<c:set var="cnt">1</c:set>
+<c:set var="cnt" value="${cnt+1}" />
+ 
+<!-- c:remove object -->
+<!-- :범위 변수를 지우는데 사용한다. -->
+<c:remove var="timer" scope="session"/>
+ 
+<!-- c:forEach object -->
+<!-- :지정된 범위 내에서 반복을 통해 flow를 제어하기 위한 core 태그이다. -->
+<c:forEach var="name" items="${expression}" [varStatus="name"]
+[begin="expression"] [end="expression"] [step="expression"]>
+body content
+</c:forEach>
+
